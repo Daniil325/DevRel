@@ -19,3 +19,6 @@ class UserEventService:
         res = await self.repo.get_events_by_user(user_id)
         return res
 
+    async def get_by_event(self, event_id):
+        res = await self.repo.get_events_by_event(event_id)
+        return res
