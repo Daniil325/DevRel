@@ -1,5 +1,5 @@
 from typing import Annotated
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 
 from backend.schemas.event import EventSchemaAdd
 from backend.services.event import EventService
@@ -11,13 +11,12 @@ router = APIRouter(prefix='/event', tags=['Events'])
 @router.get('/')
 async def list_events(
         event_service: Annotated[EventService, Depends(event_service)],
-        order: str = None
+        order: str = 'ASC',
+        filter_tag: list = Query(None),
+        filter_date: list = Query(None),
+        search: str = None
 ):
-    if order:
-        events = await event_service.get_all_ordered()
-        return events
-
-    events = await event_service.get_all()
+    events = await event_service.get_all(order, filter_tag, filter_date, search)
     return events
 
 
