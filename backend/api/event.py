@@ -11,8 +11,13 @@ router = APIRouter(prefix='/event', tags=['Events'])
 @router.get('/')
 async def list_events(
         event_service: Annotated[EventService, Depends(event_service)],
+        order: str = None
 ):
-    events = await event_service.get_tags()
+    if order:
+        events = await event_service.get_all_ordered()
+        return events
+
+    events = await event_service.get_all()
     return events
 
 
@@ -23,3 +28,12 @@ async def post_tag(
 ):
     event_id = await event_service.add_event(event)
     return {"event_id": event_id}
+
+
+@router.get('/{event_id}')
+async def list_event(
+        event_id: int,
+        event_service: Annotated[EventService, Depends(event_service)]
+):
+    event = await event_service.get_event(event_id)
+    return event
