@@ -1,4 +1,6 @@
+from backend.repositories.message import MessageRepository
 from backend.repositories.tag import TagRepository
+from backend.services.message import MessageService
 from backend.services.tag import TagService
 from backend.repositories.event import EventRepository
 from backend.services.event import EventService
@@ -52,3 +54,7 @@ def event_tag_service():
 
 def social_media_service():
     return SocialMediaService(SocialMediaRepository)
+
+
+def message_service():
+    return MessageService(MessageRepository)
