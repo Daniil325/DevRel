@@ -39,7 +39,7 @@ def tag_service():
 
 
 def event_service():
-    return EventService(EventRepository)
+    return EventService(EventRepository, EventTagRepository)
 
 
 def user_service():
