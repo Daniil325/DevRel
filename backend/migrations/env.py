@@ -19,6 +19,7 @@ from backend.models.social_media import SocialMedia
 from backend.models.user_social_media import UserSocialMedia
 from backend.models.review import Review
 from backend.models.user_event import UserEvent
+from backend.models.message import Message
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

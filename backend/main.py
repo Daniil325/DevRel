@@ -10,6 +10,7 @@ from backend.api.social_media import router as social_media_router
 from backend.api.status import router as status_router
 from backend.api.user_social_media import router as user_social_media_router
 from backend.api.user_event import router as user_event_router
+from backend.api.message import router as message_router
 from backend.auth.auth import auth_backend
 from backend.schemas.auth import UserRead, UserCreate
 
@@ -24,6 +25,7 @@ app.include_router(review_router)
 app.include_router(user_social_media_router)
 app.include_router(user_event_router)
 app.include_router(auth_router)
+app.include_router(message_router)
 
 app.include_router(
     fastapi_users.get_auth_router(auth_backend),
