@@ -2,6 +2,11 @@ from pydantic.v1 import root_validator
 from pydantic_settings import BaseSettings
 
 
+
+password = ''
+mail = ''
+tokenVk = ''
+
 class Settings(BaseSettings):
     DB_HOST: str
     DB_PORT: int

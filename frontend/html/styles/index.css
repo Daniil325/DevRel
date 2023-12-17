@@ -1,0 +1,32 @@
+
+
+.index {
+    background-color: #040A2A;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.index-promo{
+    padding-top: 144px;
+    color: white;
+    font: 4em Rubik;
+}
+
+.index-description{
+    padding-top: 12px;
+    color: #919FC4;
+    font: 1em Rubik;
+}
+
+.index-events {
+    display: grid;
+    gap: 24px;
+}
+
+
+.index-ellips {
+    background-image: url('../src/Ellipse 5.svg');
+    background-repeat: repeat;
+}

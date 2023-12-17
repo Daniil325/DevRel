@@ -1,0 +1,52 @@
+.panel{
+    width: 10%;
+    font: 1em Rubik;
+    position: fixed;
+    background-color: #050B2B;
+    padding-top: 8%;
+    z-index: 1;
+    background-image: url('../src/Ellipse 4.svg');
+    color: white;
+    height: 100%;
+}
+
+.panel-btn {
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.panel-btn:hover {
+    background-color: #40448A;
+}
+
+.panel-btn-image {
+    width: 40px;
+}
+
+.wrapper {
+    width: 90%;
+    padding-left: 10%;
+    padding-top: 5%;
+    background-color: #F8F8F8;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-ellips {
+    position: absolute;
+    width: 285.69px;
+    height: 600.65px;
+    left: 227.49px;
+    top: 235px;
+
+    background: rgba(57, 78, 153, 0.84);
+    filter: blur(175px);
+    transform: rotate(43.11deg);
+}

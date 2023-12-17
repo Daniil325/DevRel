@@ -1,0 +1,51 @@
+.event-description {
+    background-color: white;
+    padding: 5%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-radius: 50px;
+    gap: 72px;
+}
+
+.card {
+    justify-content: space-between;
+}
+
+.text-block {
+    font: 1em Rubik;
+    color: #6C6C6C;
+    margin-bottom: 48px;
+}
+
+.text-title {
+    font-size: 2em;
+    margin-bottom: 24px;
+}
+
+.description-title {
+    font: 3em Rubik;
+    padding-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.text {
+    font-size: larger;
+}
+
+.card-image {
+    margin-bottom: 24px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.full-description {
+    display: block;
+    word-wrap: break-word;
+    padding-right: 48px;
+}

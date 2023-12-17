@@ -1,0 +1,61 @@
+.container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F8F8F8;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F8F8F8;
+    border-radius: 25px;
+    text-align: left;
+}
+
+.blue-button-reg {
+    align-self: center;
+    border-radius: 40px;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(to right, #003CC5 0%, #4A52FF 51%, #003CC5 100%);
+}
+
+.blue-button-reg:hover {
+    background-position: right center;
+}
+
+.form-input {
+    border: none;
+    align-self: center;
+    width: 100%;
+}
+
+.form {
+    background-color: white;
+    vertical-align: middle;
+    border-radius: 40px;
+    align-self: center;
+    grid-column: 2;
+    display: flex;
+    gap: 6px;
+    padding: 10px;
+}
+
+.info-text {
+    font: 1em Rubik;
+}
+
+.checkbox {
+    display: flex;
+}
