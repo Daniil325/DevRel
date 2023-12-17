@@ -12,3 +12,9 @@ class UserEventRepository(SQLAlchemyRepository):
             stmt = select(self.model).where(self.model.user_id == user_id)
             res = await session.execute(stmt)
             return res.scalars().all()
+
+    async def get_events_by_event(self, event_id: int):
+        async with async_session_maker() as session:
+            stmt = select(self.model).where(self.model.event_id == event_id)
+            res = await session.execute(stmt)
+            return res.scalars().all()
