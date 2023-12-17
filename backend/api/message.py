@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Annotated
 from fastapi import APIRouter, Depends
 
@@ -23,3 +24,14 @@ async def post_message(
 ):
     message_id = await messages_service.add_message(message)
     return {"message_id": message_id}
+
+
+@router.get('/{from_user_id}/{to_user_id}')
+async def get_last_message(
+        messages_service: Annotated[MessageService, Depends(message_service)],
+        from_user_id: int = None,
+        to_user_id: int = None,
+        last_time: datetime = None
+):
+    messages = await messages_service.get_last_message(from_user_id, to_user_id, last_time)
+    return messages
